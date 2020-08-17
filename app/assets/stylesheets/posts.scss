@@ -1,0 +1,22 @@
+// Place all the styles related to the Posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.navbar {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	background-color: #ddd;
+	overflow: hidden;
+}
+
+.navbar li {
+	display: inline;
+	float: right; 
+	padding: 16px;
+}
+
+.title {
+	font-size: 30px;
+	float: left !important;
+}
