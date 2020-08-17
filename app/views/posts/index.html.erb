@@ -1,4 +1,5 @@
 <% @posts.each do |post| %>
-  <h3><%= post.user.name %><br /></h3>
+  <h2><%= post.title %></h2>
+  <small>by: <%= post.user.name %><br></small>
   <p><%= post.body %></p>
 <% end %>
