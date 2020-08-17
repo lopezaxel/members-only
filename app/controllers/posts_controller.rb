@@ -10,8 +10,14 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.find(params[:id])
-
+    @user = current_user
+    @post = @user.posts.build(post_params)
+    
+    if @post.save
+      redirect_to root_path 
+    else
+      render "new"
+    end
   end
 
   private

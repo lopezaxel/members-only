@@ -13,14 +13,14 @@
     <% if user_signed_in? %>
       <ul class="navbar">
         <li class="title">Members Only</li>
-        <li><%= link_to 'Write post', 'posts/new' %></li>
-        <li><%= link_to 'Log out', 'users/sign_out', method: "delete" %></li>
+        <li><%= link_to 'Write post', new_post_path %></li>
+        <li><%= link_to 'Log out', destroy_user_session_path, method: "delete" %></li>
       </ul>
     <% else %>
       <ul class="navbar">
         <li class="title">Members Only</li>
-        <li><%= link_to 'Log in', 'users/sign_in' %></li>
-        <li><%= link_to 'Sign in', 'users/sign_up' %></li>
+        <li><%= link_to 'Log in', new_user_session_path %></li>
+        <li><%= link_to 'Sign in', new_user_registration_path %></li>
       </ul>
     <% end %>
 
